@@ -17,6 +17,7 @@ module.exports = {
         type: Sequelize.BOOLEAN
       },
       email: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       role: {
