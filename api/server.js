@@ -5,4 +5,8 @@ const app = express();
 
 app.use(bodyParser.json());
 
+app.get('/', (req,res) => {
+    res.json({ok:true})
+})
+
 app.listen(3000, console.log('Server ON!'));
