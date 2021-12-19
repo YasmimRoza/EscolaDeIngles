@@ -11,6 +11,12 @@ router.post('/pessoas', PessoaController.create)
 router.put('/pessoas/:id', PessoaController.update)
 router.delete('/pessoas/:id', PessoaController.delete)
 
+//Pessoas e Matricula
+router.get('/pessoas/:estudanteId/matricula/:matriculaId', PessoaController.PegaMatricula)
+router.post('/pessoas/:estudanteId/matricula', PessoaController.criaMatricula)
+router.put('/pessoas/:estudanteId/matricula/:matriculaId', PessoaController.updateMatricula)
+router.delete('/pessoas/:estudanteId/matricula/:matriculaId', PessoaController.deleteMatriculas)
+
 //Niveis
 router.get('/listaniveis', NiveisController.show)
 router.get('/nivel/:id', NiveisController.search)
