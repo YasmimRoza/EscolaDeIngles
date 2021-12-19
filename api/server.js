@@ -1,12 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const router = require('./routes')
+const server = express();
 
-const app = express();
+server.use(bodyParser.json())
 
-app.use(bodyParser.json());
+server.use(router)
 
-app.get('/', (req,res) => {
-    res.json({ok:true})
-})
-
-app.listen(3000, console.log('Server ON!'));
+server.listen(3000, console.log('Server ON!'));
